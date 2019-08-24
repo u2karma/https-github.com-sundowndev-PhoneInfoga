@@ -35,16 +35,16 @@ cd sundowndev*
 <pre><code class="shell">wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
 </code></pre>
 
-<p>Extract the file with:</p>
-<pre><code class="shell">tar xvfz geckodriver-v0.24.0-linux64.tar.gz
+<p>Extract the file:</p>
+<pre><code class="shell">sudo sh -c 'tar -x geckodriver -zf geckodriver-*.tar.gz -O &gt; /usr/bin/geckodriver'
 </code></pre>
 
 <p>Make it executable:</p>
-<pre><code class="shell">chmod +x geckodriver
+<pre><code class="shell">sudo chmod +x /usr/bin/geckodriver
 </code></pre>
 
-<p>Add the driver to your PATH so other tools can find it:</p>
-<pre><code class="shell">export PATH=$PATH:/path-to-extracted-file/.
+<p>Remove the archive:</p>
+<pre><code class="shell">rm geckodriver-*.tar.gz
 </code></pre>
 
 <h4 id="windows-or-macos">Windows or MacOS</h4>
