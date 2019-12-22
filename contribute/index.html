@@ -51,7 +51,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -75,7 +75,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="brown">
   
     <svg class="md-svg">
       <defs>
@@ -340,14 +340,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#structure" class="md-nav__link">
-    Structure
+  <a href="#file-structure" class="md-nav__link">
+    File structure
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
   
 </li>
       
@@ -432,14 +446,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#structure" class="md-nav__link">
-    Structure
+  <a href="#file-structure" class="md-nav__link">
+    File structure
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
   
 </li>
       
@@ -497,21 +525,18 @@
                 
                 
                 <h1 id="contribute">Contribute</h1>
-<p>This page describe the project structure and gives you a bit of help to start developing.</p>
-<p>The project is maintained by a single person: <a href="https://github.com/sundowndev">sundowndev</a>. Contributions are welcome.</p>
-<p>You want to contribute ? Clone the project and open some pull requests !</p>
+<p>This page describe the project structure and gives you a bit of help to start contributing.</p>
+<p>The project is maintained by a single person: <a href="https://github.com/sundowndev">sundowndev</a>. Contributions are welcome !</p>
+<div class="admonition tip">
+<p class="admonition-title">Want to contribute ? Clone the project and open some pull requests !</p>
+</div>
 <h2 id="project">Project</h2>
 <h3 id="installation">Installation</h3>
 <p>See the <a href="../install/">installation page</a> to install the project.</p>
-<h3 id="structure">Structure</h3>
-<pre><code>├── docs
-│   ├── contribute.md
-│   ├── formatting.md
-│   ├── googlesearch.md
-│   ├── index.md
-│   ├── install.md
-│   ├── resources.md
-│   └── usage.md
+<h3 id="file-structure">File structure</h3>
+<pre><code>$ tree . -I __pycache__
+
+├── docs
 ├── examples
 │   ├── generate.sh
 │   ├── input.txt
@@ -528,10 +553,6 @@
 │   ├── output.py
 │   └── request.py
 ├── osint
-│   ├── disposable_num_providers.json
-│   ├── individuals.json
-│   ├── reputation.json
-│   └── social_medias.json
 ├── scanners
 │   ├── footprints.py
 │   ├── __init__.py
@@ -541,11 +562,30 @@
 │   └── recon.py
 ├── config.example.py
 ├── Dockerfile
-├── LICENSE
 ├── mkdocs.yml
 ├── phoneinfoga.py
-├── README.md
 └── requirements.txt
+</code></pre>
+
+<h2 id="testing">Testing</h2>
+<p>We use Green to run unit tests.</p>
+<pre><code class="shell"># Install green
+python -m pip install green
+
+# Run unit tests
+python -m green tests/**/*.py -r -vvv 
+</code></pre>
+
+<h2 id="formatting">Formatting</h2>
+<p>We use Black code formatter to format Python files.</p>
+<pre><code class="shell"># Install Black
+python -m pip install black
+
+# Check file formats using Black
+python -m black --config black.config.toml lib scanners tests --check
+
+# Format files using Black
+python -m black --config black.config.toml lib scanners tests
 </code></pre>
 
 <h2 id="documentation">Documentation</h2>
