@@ -305,18 +305,12 @@
     Available scanners
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -430,18 +424,12 @@
     Available scanners
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -496,7 +484,9 @@ optional arguments:
 <pre><code>python3 phoneinfoga.py -n &quot;+1 555-444-3333&quot;
 </code></pre>
 
-<p>Note that the country code is essential. You don't know which country code to use ? <a href="https://www.countrycode.org/">Find it here</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note that the country code is essential. You don't know which country code to use ? <a href="https://www.countrycode.org/">Find it here</a></p>
+</div>
 <h4 id="output-file">Output file</h4>
 <p>Check several numbers at once and send results to a file. Optionally, ensure no color code is used with <code>--no-ansi</code></p>
 <pre><code>python3 phoneinfoga.py -i numbers.txt -o results.txt --no-ansi
@@ -522,7 +512,7 @@ optional arguments:
 <p><strong>Numverify</strong> provide standard but useful informations such as number's country code, location, line type and carrier.</p>
 <p><strong>OVH</strong> is, besides being a web and cloud hosting company, a telecom provider with several VoIP numbers in the Europe. Thanks to their API-key free <a href="https://api.ovh.com/">REST API</a>, we are able to tell if a number is owned by OVH Telecom or not.</p>
 <p><strong>Footprints</strong> scanner uses Google search engine and <a href="https://en.wikipedia.org/wiki/Google_hacking">Google Dorks</a> to search phone number's footprints everywhere on the web. It allows you to search for scam reports, social media profiles, documents and more.</p>
-<h4 id="examples">Examples</h4>
+<h2 id="examples">Examples</h2>
 <p>Check for a number range on OVH :</p>
 <pre><code>python3 phoneinfoga.py -n &quot;+33 01 88 33 40 32&quot; -s ovh
 </code></pre>

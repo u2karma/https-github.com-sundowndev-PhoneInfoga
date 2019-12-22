@@ -685,8 +685,8 @@
                 <p>To install PhoneInfoga, you'll need to download source code then install dependencies.</p>
 <p>Requirements : </p>
 <ul>
-<li>python3 and python3-pip OR Docker</li>
-<li>git OR wget and curl</li>
+<li>python3 and python3-pip <strong>OR</strong> Docker</li>
+<li>git <strong>OR</strong> wget and curl</li>
 </ul>
 <h2 id="manual-installation">Manual installation</h2>
 <h3 id="clone-the-repository">Clone the repository</h3>
@@ -713,7 +713,10 @@ cd sundowndev*
 </code></pre>
 
 <h3 id="install-the-geckodriver">Install the Geckodriver</h3>
-<p>The Geckodriver is the Firefox webdriver for Selenium, which is used by PhoneInfoga to perform queries to Google search and handle captcha. Firefox is actually the only webdriver supported by PhoneInfoga. Want to hack it to use chrome or another driver instead ? See <a href="https://github.com/sundowndev/PhoneInfoga/blob/8179fe4857ca7df2d843119e2123c260e8401818/lib/googlesearch.py#L35">this file</a>.</p>
+<p>The Geckodriver is the Firefox webdriver for Selenium, which is used by PhoneInfoga to perform queries to Google search and handle captcha. Firefox is actually the only webdriver supported by PhoneInfoga.</p>
+<div class="admonition tip">
+<p class="admonition-title">Want to hack it to use chrome or another driver instead ? See <a href="https://github.com/sundowndev/PhoneInfoga/blob/8179fe4857ca7df2d843119e2123c260e8401818/lib/googlesearch.py#L35">this file</a>.</p>
+</div>
 <h4 id="linux">Linux</h4>
 <h5 id="download">Download</h5>
 <p>Go to the <a href="https://github.com/mozilla/geckodriver/releases">geckodriver releases page</a>. Find the latest version of the driver for your platform and download it. For example: </p>
@@ -732,11 +735,14 @@ cd sundowndev*
 <pre><code class="shell">rm geckodriver-*.tar.gz
 </code></pre>
 
-<p><strong>NOTE:</strong> You also have to install Firefox browser v65+. To verify everything is fine, be sure the following commands work:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You also have to install Firefox browser v65+. To verify everything is fine, be sure the following commands work:</p>
 <ul>
 <li><code>which firefox</code> should return something like <code>/usr/bin/firefox</code></li>
 <li><code>which geckodriver</code> should return something like <code>/usr/bin/geckodriver</code></li>
 </ul>
+</div>
 <h4 id="windows-or-macos">Windows or MacOS</h4>
 <ul>
 <li>Go to the <a href="https://github.com/mozilla/geckodriver/releases">geckodriver releases page</a>. Find the latest version of the driver for your platform and download it.</li>
@@ -753,7 +759,10 @@ cd sundowndev*
 <pre><code class="shell">docker run --rm -it sundowndev/phoneinfoga --help
 </code></pre>
 
-<p><strong>WARNING</strong>: This image only contain the python tool and not the Selenium hub which is useful to query Google. In order to use Selenium driver, you must use the docker-compose configuration, as described below.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This image only contain the python tool and not the Selenium hub which is useful to query Google. In order to use Selenium driver, you must use the docker-compose configuration, as described below.</p>
+</div>
 <h3 id="docker-compose">Docker-compose</h3>
 <p>You can use a single docker-compose file to run the tool without downloading the source code.</p>
 <pre><code>version: &quot;3&quot;

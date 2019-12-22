@@ -504,9 +504,13 @@
 </ul>
 <h3 id="using-the-webdriver">Using the webdriver</h3>
 <p>By default, PhoneInfo uses Selenium to handle Google search feature. When running OSINT scans, you will usually be blacklisted very easily by Google, which will ask the tool to complete a captcha. Nothing more simple, just complete the captcha that appears on the firefox window. Then press ENTER in the CLI to tell the tool it can continue the scanning process.</p>
-<p>If the tool can't find your browser executable, you can specify the Firefox executable path in <code>config.py</code> or leave it blank to use the default configuration.</p>
-<p>Still having issues with Google captcha ? Please <a href="https://github.com/sundowndev/PhoneInfoga/issues">open an issue</a>.
-<strong>Be careful, the cookie contain your IP address.</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">If the tool can't find your browser executable, you can specify the Firefox executable path in <code>config.py</code> or leave it blank to use the default configuration.</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Failure<p>Still having issues with Google captcha ? Please <a href="https://github.com/sundowndev/PhoneInfoga/issues">open an issue</a>. <strong>Please don't disclose any personal data.</strong></p>
+</p>
+</div>
 <h4 id="using-docker">Using Docker</h4>
 <p>When you run the tool with docker, the geckodriver and Selenium are also containerized. Make sure you launched all services with docker-compose.</p>
 <p>After you successfully launched all services, you should have the following setup :</p>
@@ -523,7 +527,10 @@ selenium-hub            /opt/bin/entry_point.sh   Up       0.0.0.0:4444-&gt;4444
 <pre><code>vnc://127.0.0.1:5900
 </code></pre>
 
-<p>Also make sure you disabled any <code>read-only</code> or <code>view-only</code> mode so you can interact with the browser in order to complete the captcha.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip<p>Also make sure you disabled any <code>read-only</code> or <code>view-only</code> mode so you can interact with the browser in order to complete the captcha.</p>
+</p>
+</div>
 <h5 id="vnc-clients">VNC clients</h5>
 <ul>
 <li><a href="https://sourceforge.net/projects/chicken/">Chicken, an open-source VNC client for MacOS X</a></li>
