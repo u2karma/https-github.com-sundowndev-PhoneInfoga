@@ -504,6 +504,7 @@
 </ul>
 <h3 id="using-the-webdriver">Using the webdriver</h3>
 <p>By default, PhoneInfo uses Selenium to handle Google search feature. When running OSINT scans, you will usually be blacklisted very easily by Google, which will ask the tool to complete a captcha. Nothing more simple, just complete the captcha that appears on the firefox window. Then press ENTER in the CLI to tell the tool it can continue the scanning process.</p>
+<p>If the tool can't find your browser executable, you can specify the Firefox executable path in <code>config.py</code> or leave it blank to use the default configuration.</p>
 <p>Still having issues with Google captcha ? Please <a href="https://github.com/sundowndev/PhoneInfoga/issues">open an issue</a>.
 <strong>Be careful, the cookie contain your IP address.</strong></p>
 <h4 id="using-docker">Using Docker</h4>
