@@ -686,7 +686,7 @@
 <p>Requirements : </p>
 <ul>
 <li>python3 and python3-pip <strong>OR</strong> Docker</li>
-<li>git <strong>OR</strong> wget and curl</li>
+<li>git <strong>OR</strong> curl</li>
 </ul>
 <h2 id="manual-installation">Manual installation</h2>
 <h3 id="clone-the-repository">Clone the repository</h3>
@@ -695,7 +695,7 @@ cd PhoneInfoga/
 </code></pre>
 
 <p>You can also download the source code archive : </p>
-<pre><code class="shell">wget $(curl -s https://api.github.com/repos/sundowndev/phoneinfoga/releases/latest | grep tarball_url | cut -d '&quot;' -f 4) -O PhoneInfoga.tar.gz
+<pre><code class="shell">curl $(curl -s https://api.github.com/repos/sundowndev/phoneinfoga/releases/latest | grep tarball_url | cut -d '&quot;' -f 4) -o PhoneInfoga.tar.gz
 tar -xvzf PhoneInfoga.tar.gz
 cd sundowndev*
 </code></pre>
@@ -720,7 +720,7 @@ cd sundowndev*
 <h4 id="linux">Linux</h4>
 <h5 id="download">Download</h5>
 <p>Go to the <a href="https://github.com/mozilla/geckodriver/releases">geckodriver releases page</a>. Find the latest version of the driver for your platform and download it. For example: </p>
-<pre><code class="shell">wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+<pre><code class="shell">curl https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz -o geckodriver-v0.24.0-linux64.tar.gz
 </code></pre>
 
 <h5 id="extract-the-file">Extract the file</h5>
